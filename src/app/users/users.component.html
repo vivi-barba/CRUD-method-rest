@@ -1,0 +1,22 @@
+
+<div class="center-position">
+<h2>Usuarios</h2>
+
+<table *ngIf="responseUsers">
+  <thead>
+    <td>Nome</td>
+    <td>Sobrenome</td>
+    <td>...</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of responseUsers.data">
+      <td>{{user.first_name}}</td>
+      <td>{{user.last_name}}</td>
+      <td>
+          <a routerLink="/users/update/{{user.id}}">Editar</a> |
+          <a routerLink="/users/delete/{{user.id}}">Deletar</a>
+        </td>
+    </tr>
+  </tbody>
+</table>
+</div>
