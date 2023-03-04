@@ -14,7 +14,12 @@ export class UpdateComponent implements OnInit {
   id!: any;
   request!: RequestUpdate;
 
-  constructor(private userService: UserService, private route: ActivatedRoute){} 
+  constructor(
+    private userService: UserService,
+    private route: ActivatedRoute){
+
+    } 
+
   // recuperando id do usuario
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
@@ -23,7 +28,7 @@ export class UpdateComponent implements OnInit {
       name: `${res.data.first_name} ${res.data.last_name}`,
       job: '',
     }
-   } );
+   });
   }
     
 update(){
@@ -31,9 +36,7 @@ update(){
     alert(`${res.name}, atulizado com sucesso`);
   });
 }
-
- 
-
-  }
+  
+}
 
 
