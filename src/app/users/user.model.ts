@@ -1,4 +1,3 @@
-
     export interface User {
         id: number;
         email: string;
@@ -28,13 +27,12 @@
         id: string;
         createdAt: Date;
     }
-//Modelos para o get user
-
-export interface ResponseUser{
+    //Modelos para o get user
+    export interface ResponseUser{
     data: User
 }
-//modelos para update
-export interface RequestUpdate {
+    //modelos para update
+    export interface RequestUpdate {
         name: string;
         job: string;
     }

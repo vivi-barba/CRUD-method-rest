@@ -1,31 +1,32 @@
-
 <div class="center">
-<h2>Criar Usuario</h2>
+  <h2>Criar Usuario</h2>
 
-<div class="position">
-  <label>
-    Nome:
-    <input placeholder="Insira o nome" [(ngModel)]="request.name" />
-  </label>
-  <br />
-  <label>
-    Profissão:
-    <input placeholder="Insira a profissão" [(ngModel)]="request.job" />
-  </label>
-  <br />
-  <button (click)="save()">Gravar</button>
-</div>
+    <div class="position">
+        <label>
+          Nome:
+          <input placeholder="Insira o nome" [(ngModel)]="request.name" />
+        </label>
+        <br />
+        <label> 
+          Profissão:
+          <input placeholder="Insira a profissão" [(ngModel)]="request.job" />
+        </label>
+        <br />
+        <button (click)="save()">Gravar</button>
+    </div>
 
 <br />
 <br />
 
-<div *ngIf="response">
-  <h3>Criado com Sucesso!</h3>
-  <label>Nome: {{ response.name }}</label
-  ><br />
-  <label>Profissão: {{ response.job }} </label><br />
-  <label> Id: {{ response.id }}</label
-  ><br />
-  <label>Criado em: {{response.createdAt}} </label><br />
-</div>
+    <div *ngIf="response">
+        <h3>Criado com Sucesso!</h3>
+          <label>Nome: {{ response.name }}</label>
+        <br />
+          <label>Profissão: {{ response.job }} </label>
+        <br />
+          <label> Id: {{ response.id }}</label>
+        <br />
+          <label>Criado em: {{response.createdAt}} </label>
+        <br />
+    </div>
 </div>

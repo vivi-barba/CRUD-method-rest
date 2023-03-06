@@ -13,7 +13,11 @@ export class DeleteUserComponent implements OnInit {
   id!: any;
   user!: User;
 
-  constructor( private userService: UserService, private route: ActivatedRoute, private _route: Router ) { }
+  constructor( 
+    private userService: UserService, 
+    private route: ActivatedRoute, 
+    private _route: Router 
+    ) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');

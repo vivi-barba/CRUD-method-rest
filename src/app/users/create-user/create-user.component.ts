@@ -7,8 +7,9 @@ import { UserService } from '../user.service';
   templateUrl: './create-user.component.html',
   styleUrls: ['./create-user.component.css']
 })
-export class CreateUserComponent implements OnInit {
-//declarando requisição 
+export class CreateUserComponent {
+//declarando dados a serem recebidos pela requisição
+  
   request: RequestCreate = {
     name: '',
     job: ''
@@ -16,20 +17,17 @@ export class CreateUserComponent implements OnInit {
 
   response!: ResponseCreate
 
-  constructor(private userService: UserService) { }
+  constructor(
+    private userService: UserService
+    ) { }
 
-  ngOnInit(): void {
 
-  }
-
-  //save users for button save
+  // requisitando dados 
   save(){
-  //resquisto de dadoos
-this.userService.createUsers(this.request)
-.subscribe( res =>{
-  this.response = res;
-
-})
-  }
+  this.userService.createUsers(this.request)
+    .subscribe( res =>{
+        this.response = res;
+  })
+}
 
 }

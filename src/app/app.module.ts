@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { UpdateComponent } from './users/update/update.component';
 import { DeleteUserComponent } from './users/delete-user/delete-user.component';
 
+//import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     AppComponent,
